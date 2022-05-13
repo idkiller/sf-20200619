@@ -4,9 +4,7 @@ import adapter from '@sveltejs/adapter-static';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		paths: {
-			base: dev ? '' : '/sf-20200619',
-		},
+		appDir: 'app',
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
