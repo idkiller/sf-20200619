@@ -6,3 +6,35 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+section {
+  word-break: keep-all;
+}
+
+h2.video-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+  padding-top: 0.15em;
+}
+
+div.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+  margin: var(--r-block-margin) 0;
+  gap: 0.5em;
+}
+
+div.image-list > img {
+  max-height: 5em;
+  width: auto;
+  margin: 0;
+  display: inline-block;
+}
+
+div.subtitle {
+  position: absolute;
+  top: auto;
+  bottom: 0;  
+}
