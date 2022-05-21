@@ -1,6 +1,6 @@
-import './style.css'
 import 'reveal.js/dist/reveal.css'
 import 'reveal.js/dist/theme/black.css'
+import './theme_video.scss'
 import Reveal from 'reveal.js'
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js'
 
@@ -20,6 +20,8 @@ const deck = new Reveal({
   plugins: [Markdown]
 })
 deck.initialize({
+  width: 1280,
+  height: 720,
   controls: false,
   progress: false,
   markdown: {
