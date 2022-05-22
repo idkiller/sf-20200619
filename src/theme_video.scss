@@ -6,3 +6,15 @@
     word-break: keep-all;
     background-color: rgba(0, 0, 0, 0.5);
 }
+.reveal section.half-left {
+    width: 50%;
+}
+.reveal span.name {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #ccf
+}
+.reveal mark {
+    background-color: transparent;
+    color: #ff0;
+}
