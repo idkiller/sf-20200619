@@ -19,6 +19,34 @@ for (const attr of attrs) {
 const deck = new Reveal({
   plugins: [Markdown]
 })
+
+deck.on('slidechanged', event => {
+  const elements = event.currentSlide.querySelectorAll('.onpage')
+  if (!elements) return
+  elements.forEach(element => {
+    const clz = Array.from(element.classList.values())
+    element.classList.remove(...clz)
+    window.requestAnimationFrame(t => window.requestAnimationFrame(t => element.classList.add(...clz)))
+  })
+})
+
+deck.on('fragmentshown', event => {
+  if (event.fragment.classList.contains('iframe-ev-next')) {
+    const bgif = document.querySelector('.slide-background.present iframe')
+    if (bgif) {
+      bgif.contentWindow.postMessage('next', '*')
+    }
+  }
+})
+deck.on('fragmenthidden', event => {
+  if (event.fragment.classList.contains('iframe-ev-next')) {
+    const bgif = document.querySelector('.slide-background.present iframe')
+    if (bgif) {
+      bgif.contentWindow.postMessage('prev', '*')
+    }
+  }
+})
+
 deck.initialize({
   width: 1280,
   height: 720,

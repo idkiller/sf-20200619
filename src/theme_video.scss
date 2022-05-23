@@ -1,11 +1,21 @@
 .reveal h2 {
     vertical-align: middle;
-    padding-top: 0.15em;
+    line-height: 1.6;
 }
 .reveal section {
     word-break: keep-all;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.reveal section.custombg {
+    background-color: transparent;
+}
+
+section.custombg p,
+section.custombg h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+    
 .reveal section.half-left {
     width: 50%;
 }
@@ -17,4 +27,17 @@
 .reveal mark {
     background-color: transparent;
     color: #ff0;
+}
+.reveal img.slap {
+    animation: slap 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05) forwards;
+    transform: scale(1.8);
+}
+@keyframes slap {
+    to {
+        transform: scale(1.4) rotate(10deg);
+    }
+}
+
+iframe {
+    pointer-events: none;
 }
