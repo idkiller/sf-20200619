@@ -154,8 +154,6 @@
       if (event.data === 'next') step++;
       else if (event.data === 'prev') step--;
 
-      console.log(step)
-
       if (step === 0) {
         document.getElementById('first_time').style.opacity = 0;
         document.getElementById('second_time').style.opacity = 0;
