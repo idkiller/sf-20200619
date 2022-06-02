@@ -50,8 +50,10 @@ deck.on('fragmenthidden', event => {
 deck.initialize({
   width: 1280,
   height: 720,
-  controls: false,
-  progress: false,
+  //controls: false,
+  //progress: false,
+  slideNumber: true,
+  showSlideNumber: 'all',
   markdown: {
     baseUrl: import.meta.env.BASE_URL
   }
