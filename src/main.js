@@ -3,6 +3,7 @@ import 'reveal.js/dist/theme/black.css'
 import './theme_video.scss'
 import Reveal from 'reveal.js'
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js'
+import BackgroundEffect from './backgroundEffect'
 
 function replaceBase(element, attr) {
   const url = element.getAttribute(attr)
@@ -17,7 +18,7 @@ for (const attr of attrs) {
 }
 
 const deck = new Reveal({
-  plugins: [Markdown]
+  plugins: [Markdown, BackgroundEffect]
 })
 
 deck.on('slidechanged', event => {
